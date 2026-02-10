@@ -32,7 +32,7 @@ function setNumber (num) {
 function setOperator (op) {
   if (operator && !resetNext) {
     current = String(compute())
-    }
+  }
   previous = current
   operator = op
   resetNext = true
@@ -63,7 +63,7 @@ buttons.forEach(btn => {
     if (btn.dataset.action === 'sign') current = String(parseFloat(current) * -1)
     if (btn.dataset.action === 'percent') current = String(parseFloat(current) / 100)
 
-     updateDisplay()
+    updateDisplay()
   })
 })
 
