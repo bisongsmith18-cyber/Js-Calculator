@@ -1,4 +1,4 @@
-## JS Calculator (iPhone Style)
+# JS Calculator (iPhone Style)
 
 A JavaScript calculator inspired by the iPhone calculator, built with HTML, CSS, and Vanilla JavaScript.  
 This version includes improved UI interactions, keyboard support, and cleaner calculator logic.
