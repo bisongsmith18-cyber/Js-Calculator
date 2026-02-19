@@ -78,7 +78,7 @@ buttons.forEach(btn => {
 
 /* Keyboard Support */
 window.addEventListener('keydown', e => {
-  if (!isNaN(e.key)) setNumber(e.key);
+  if (!isNaN(e.key)) setNumber(e.key)
   if (e.key === '.') if (!current.includes('.')) current += '.'
   if (e.key === '+') setOperator('+')
   if (e.key === '-') setOperator('−')
