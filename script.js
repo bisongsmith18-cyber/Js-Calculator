@@ -7,12 +7,12 @@ let previous = null
 let operator = null
 let resetNext = false
 
- function updateDisplay() {
+function updateDisplay () {
   display.textContent = current
   memory.textContent = previous && operator ? `${previous} ${operator}` : ''
 }
 
- function compute() {
+function compute () {
   const a = parseFloat(previous)
   const b = parseFloat(current)
 
@@ -22,7 +22,7 @@ let resetNext = false
   if (operator === '÷') return b === 0 ? 'Error' : a / b
 }
 
- function setNumber(num) {
+function setNumber (num) {
   if (current === '0' || resetNext) {
     current = num
     resetNext = false
@@ -31,7 +31,7 @@ let resetNext = false
   }
 }
 
- function setOperator(op) {
+function setOperator (op) {
   if (operator && !resetNext) {
     current = String(compute())
   }
@@ -40,7 +40,7 @@ let resetNext = false
   resetNext = true
 }
 
- function equals() {
+function equals () {
   if (!operator) return
   current = String(compute())
   previous = null
@@ -48,14 +48,14 @@ let resetNext = false
   resetNext = true
 }
 
- function clearAll() {
+function clearAll () {
   current = '0'
   previous = null
   operator = null
   resetNext = false
 }
 
- function deleteDigit() {
+function deleteDigit () {
   if (resetNext) return
   current =
     current.length > 1 ? current.slice(0, -1) : '0'
@@ -78,7 +78,7 @@ buttons.forEach(btn => {
 
 /* Keyboard Support */
 window.addEventListener('keydown', e => {
-  if (!isNaN(e.key)) setNumber(e.key)
+  if (!isNaN(e.key)) setNumber(e.key);
   if (e.key === '.') if (!current.includes('.')) current += '.'
   if (e.key === '+') setOperator('+')
   if (e.key === '-') setOperator('−')
