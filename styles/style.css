@@ -21,6 +21,18 @@ body {
   padding: 20px;
   box-shadow: 0 25px 60px rgba(0 0 0 70%);
 }
+.display-container {
+  margin-bottom: 20px;
+}
+
+.memory {
+  color: #888;
+  font-size: 18px;
+  text-align: right;
+  min-height: 22px;
+  padding-right: 6px;
+}
+
 
 /* Display Screen */
 .display {
