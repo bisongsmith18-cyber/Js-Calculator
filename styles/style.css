@@ -1,118 +1,65 @@
 * {
-  box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: #000;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: #000;
+  color: #fff;
 }
 
-/* Calculator Container */
 .calculator {
   width: 320px;
   background: #000;
-  border-radius: 32px;
   padding: 20px;
-  box-shadow: 0 25px 60px rgba(0 0 0 70%);
+  border-radius: 30px;
 }
 
-.display-container {
-  margin-bottom: 20px;
-}
-
-.memory {
-  color: #888;
-  font-size: 18px;
-  text-align: right;
-  min-height: 22px;
-  padding-right: 6px;
-}
-
-/* Display Screen */
 .display {
-  color: white;
-  font-size: 52px;
-  font-weight: 300;
+  width: 100%;
+  height: 90px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 42px;
   text-align: right;
-  margin-bottom: 20px;
-  padding: 10px;
-  min-height: 70px;
-  overflow: hidden;
-  word-wrap: break-word;
+  margin-bottom: 25px;
 }
 
-/* Button Grid */
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
+  gap: 15px;
 }
 
-/* Base Button Style */
 button {
-  height: 65px;
-  font-size: 24px;
+  height: 70px;
   border: none;
   border-radius: 50%;
-  background: #333;
-  color: white;
+  font-size: 24px;
   cursor: pointer;
-  transition: filter 0.1s ease, transform 0.05s ease;
+  background: #333;
+  color: #fff;
+  transition: 0.15s ease;
 }
 
-/* Button Press Effect */
 button:active {
-  transform: scale(0.97);
+  transform: scale(0.92);
 }
 
-/* Operator Buttons */
-.orange {
-  background: #ff9500;
-  color: white;
-}
-
-.orange:active {
-  filter: brightness(1.2);
-}
-
-/* Utility Buttons */
 .gray {
   background: #a5a5a5;
   color: #000;
 }
 
-.gray:active {
-  filter: brightness(0.9);
-}
-
-/* Zero Button */
-.zero {
-  grid-column: span 2;
-  border-radius: 35px;
-  text-align: left;
-  padding-left: 26px;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 360px) {
-  .calculator {
-    width: 100%;
-    height: 100vh;
-    border-radius: 0;
-  }
-
-  button {
-    height: 70px;
-    font-size: 26px;
-  }
-
-  .display {
-    font-size: 56px;
-  }
+.operator,
+.equals {
+  background: #ff9500;
+  color: #fff;
 }
